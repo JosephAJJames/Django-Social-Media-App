@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="921335b0-69f6-4fc5-bbef-caca70ea0e21" name="Changes" comment="Implamented login, changed login view function name to login_user" />
+    <list default="true" id="921335b0-69f6-4fc5-bbef-caca70ea0e21" name="Changes" comment="Dont need custom user form anymore, using django built in">
+      <change afterPath="$PROJECT_DIR$/smapp/mainpage/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smapp/templates/mainpage/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smapp/smapp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/smapp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smapp/smapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/smapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smapp/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/users/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,12 +95,21 @@
       <option name="project" value="LOCAL" />
       <updated>1724422056555</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Dont need custom user form anymore, using django built in">
+      <option name="closed" value="true" />
+      <created>1724422746201</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1724422746201</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Set Up" />
     <MESSAGE value="Implamented login, changed login view function name to login_user" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implamented login, changed login view function name to login_user" />
+    <MESSAGE value="Dont need custom user form anymore, using django built in" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dont need custom user form anymore, using django built in" />
   </component>
 </project>
