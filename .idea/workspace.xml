@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="921335b0-69f6-4fc5-bbef-caca70ea0e21" name="Changes" comment="Added re-direct to post list after successfull login">
-      <change afterPath="$PROJECT_DIR$/smapp/templates/users/sign_up.html" afterDir="false" />
+    <list default="true" id="921335b0-69f6-4fc5-bbef-caca70ea0e21" name="Changes" comment="Added signup button on login_page.html and created the page with the form">
+      <change afterPath="$PROJECT_DIR$/smapp/posts/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smapp/templates/users/login_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/templates/users/login_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smapp/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smapp/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smapp/mainpage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/mainpage/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smapp/smapp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/smapp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smapp/templates/mainpage/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/templates/mainpage/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -110,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724427923202</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added signup button on login_page.html and created the page with the form">
+      <option name="closed" value="true" />
+      <created>1724432694473</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1724432694473</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -118,6 +126,7 @@
     <MESSAGE value="Implamented login, changed login view function name to login_user" />
     <MESSAGE value="Dont need custom user form anymore, using django built in" />
     <MESSAGE value="Added re-direct to post list after successfull login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added re-direct to post list after successfull login" />
+    <MESSAGE value="Added signup button on login_page.html and created the page with the form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added signup button on login_page.html and created the page with the form" />
   </component>
 </project>
