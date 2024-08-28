@@ -7,19 +7,19 @@
 <body>
     <h1>Main Page</h1>
     <h2>New Post</h2>
-    <form method="POST" enctype="multipart/form-data">
+    <form method="POST" action="/posts/new_post" enctype="multipart/form-data">
         {% csrf_token %}
         {{new_post_form}}
         <button>Submit</button>
     </form>
     <li class = "post_list">
         {% for post in posts %}
-            <div class = "post">
-                <img src="{{post.image.url}}">
-                <p>{{post.text}}</p>
-                <p>{{post.author}}</p>
-                <p>{{post.created_at}}</p>
-            </div>
+        <div class = "post">
+            <img src="{{post.image.url}}">
+            <p>{{post.text}}</p>
+            <p>{{post.author}}</p>
+            <p>{{post.created_at}}</p>
+        </div>
         {% empty %}
             <p>No Posts</p>
         {% endfor %}

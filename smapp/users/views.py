@@ -27,3 +27,10 @@ def register_user(req):
         context={
             'signup_form': UserCreationForm
         })
+    elif req.method == "POST":
+        form = UserCreationForm(req.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.profilepic_id = 0 #set to default
+            user.save()
+        return redirect("users:login")
