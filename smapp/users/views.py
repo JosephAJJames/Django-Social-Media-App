@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from .forms import UserForm
 from profilepics.models import ProfilePic
+from .helpers import detect_difference, apply_changes
 
 # Create your views here.
 
@@ -40,4 +41,15 @@ def register_user(req):
         return redirect("users:login")
 
 def edit_profile(req):
-    return render(req, 'users/edit_profile.html')
+    if req.method == "GET":
+        return render(req, 'users/edit_profile.html', context={
+            'user': req.user
+        })
+    elif req.method == "POST":
+        new_username, new_password, new_pfp = req.POST.get("username"), req.POST.get("password"), req.POST.get("profilepic")
+        current_user_dict, alterd_user_dict = (req.user.username, req.user.password, req.user.profilepic), (new_username, new_password, new_pfp)
+
+        differences = detect_difference(current_user_dict, alterd_user_dict) #will return a dict of the attributes to be changed and what to change to
+        apply_changes(differences, req.user)
+
+        return HttpResponse("bosh")
