@@ -13,7 +13,7 @@ def post_list(req):
 
     comment_forms = []
     for post in posts:
-        new_comment = CommentForm(initial={'post_id': post.positID})
+        new_comment = CommentForm(initial={'post_id': post.id})
         comment_forms.append(new_comment)
 
     comments = Comment.objects.all()
@@ -27,7 +27,7 @@ def post_list(req):
 
     posts_with_forms = zip(posts, comment_forms)
 
-    return render(req, 'main/post_list.html',
+    return render(req, 'mainpage/main.html',
                   {'new_post': NewPostForm,
                    'posts': posts,
                    'posts_and_comment_form': posts_with_forms,
