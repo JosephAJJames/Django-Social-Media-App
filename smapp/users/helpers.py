@@ -9,12 +9,13 @@ def add_to_diff_dict(differences, key_value_tuple):
     key, value = key_value_tuple[0], key_value_tuple[1]
     if key == "profilepic":
         piccie = key_value_tuple[1]
-        pic = piccie.save()
-        value = piccie.id
-
+        new_pfp = ProfilePic(image=piccie)
+        new_pfp.save()
+        value = new_pfp.id
 
     differences[key] = value
     return differences
+
 
 def apply_changes(differences, user):
     print(differences)
@@ -38,3 +39,4 @@ def detect_difference(dict_of_original_user, dict_of_new_user):
                 differences = add_to_diff_dict(differences, (key, val2)) #add the key and the changed value to
 
     return differences
+

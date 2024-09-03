@@ -53,4 +53,4 @@ def edit_profile(req):
         differences = detect_difference(current_user_dict, alterd_user_dict) #will return a dict of the attributes to be changed and what to change to
         apply_changes(differences, req.user)
 
-        return HttpResponse("bosh")
+        return redirect("users:edit_profile")
