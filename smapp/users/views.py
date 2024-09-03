@@ -40,14 +40,15 @@ def register_user(req):
             user.save()
         return redirect("users:login")
 
+
 def edit_profile(req):
     if req.method == "GET":
         return render(req, 'users/edit_profile.html', context={
             'user': req.user
         })
     elif req.method == "POST":
-        new_username, new_password, new_pfp = req.POST.get("username"), req.POST.get("password"), req.POST.get("profilepic")
-        current_user_dict, alterd_user_dict = (req.user.username, req.user.password, req.user.profilepic), (new_username, new_password, new_pfp)
+        new_username, new_password, new_pfp = req.POST.get("username"), req.POST.get("password"), req.FILES.get("profilepic")
+        current_user_dict, alterd_user_dict = {"username": req.user.username, "password": req.user.password, "profilepic": req.user.profilepic}, {"username": new_username, "password": new_password, "profilepic": new_pfp}
 
         differences = detect_difference(current_user_dict, alterd_user_dict) #will return a dict of the attributes to be changed and what to change to
         apply_changes(differences, req.user)
