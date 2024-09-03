@@ -9,10 +9,27 @@ from comments.models import Comment
 def post_list(req):
     posts = Post.objects.all()
     comments = Comment.objects.all()
+    comment_dict = {}
 
-    return render(req, 'mainpage/main.html',
-        context={
-        'new_post_form': NewPostForm,
-        'new_comment_form': CommentForm,
-        'posts': posts
-    })
+    comment_forms = []
+    for post in posts:
+        new_comment = CommentForm(initial={'post_id': post.positID})
+        comment_forms.append(new_comment)
+
+    comments = Comment.objects.all()
+
+    for y in comments:
+        if y.post_id.positID not in comment_dict:
+            comment_dict[y.post_id.positID] = [y.text]
+        else:
+            comment_dict[y.post_id.positID].append(y.text)
+
+
+    posts_with_forms = zip(posts, comment_forms)
+
+    return render(req, 'main/post_list.html',
+                  {'new_post': NewPostForm,
+                   'posts': posts,
+                   'posts_and_comment_form': posts_with_forms,
+                   'comment_dict': comment_dict
+                   })
