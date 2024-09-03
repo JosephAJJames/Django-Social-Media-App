@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'profilepics',
     'users',
     'smapp',
+    'comments',
     'mainpage'
 ]
 

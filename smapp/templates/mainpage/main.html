@@ -6,6 +6,9 @@
 </head>
 <body>
     <h1>Main Page</h1>
+    <form method="GET" action="/">
+
+    </form>
     <h2>New Post</h2>
     <a href = "/users/edit_profile">Edit Profile</a>
     <form method="POST" action="/posts/new_post" enctype="multipart/form-data">
@@ -21,6 +24,20 @@
             <p>{{post.text}}</p>
             <p>{{post.author}}</p>
             <p>{{post.created_at}}</p>
+            {% with comments=comment_dict|get_value:post.positID %}
+                {% if comments %}
+                    {% for comment in comments %}
+                        <p>{{ comment }}</p>
+                    {% endfor %}
+                {% else %}
+                    <p>No comments for this post</p>
+                {% endif %}
+            {% endwith %}
+            <form action="/comments/new_comment" method="POST">
+                {% csrf_token %}
+                {{ form }}
+                <button>Submit</button>
+            </form>
         </div>
         {% empty %}
             <p>No Posts</p>
