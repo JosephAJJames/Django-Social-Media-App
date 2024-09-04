@@ -18,10 +18,11 @@
             {% for post, form in posts_and_comment_form %}
                 <div class="post">
                     <img src="{{ post.image.url }}">
+                    <img id="pfp" src= "{{post.author.profilepic.image.url}}">
                     <p>{{ post.text }}</p>
                     <p>{{ post.author }}</p>
                     <p>{{ post.created_at }}</p>
-                    {% with comments=comment_dict|get_value:post.positID %}
+                    {% with comments=comment_dict|get_value:post.id %}
                         {% if comments %}
                             {% for comment in comments %}
                                 <p>{{ comment }}</p>

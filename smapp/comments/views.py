@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
+from .forms import CommentForm
+from posts.models import Post
 
 # Create your views here.
 def new_comment(req):
@@ -9,3 +11,5 @@ def new_comment(req):
             comment.author = req.user
             comment.post = get_object_or_404(Post, pk=req.POST.get("post_id"))
             form.save()
+
+    return redirect("mainpage:post_list")

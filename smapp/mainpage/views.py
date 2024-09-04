@@ -19,10 +19,10 @@ def post_list(req):
     comments = Comment.objects.all()
 
     for y in comments:
-        if y.post_id.positID not in comment_dict:
-            comment_dict[y.post_id.positID] = [y.text]
+        if y.post_id.id not in comment_dict:
+            comment_dict[y.post_id.id] = [y.text]
         else:
-            comment_dict[y.post_id.positID].append(y.text)
+            comment_dict[y.post_id.id].append(y.text)
 
 
     posts_with_forms = zip(posts, comment_forms)
