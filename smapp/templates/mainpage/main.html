@@ -6,6 +6,13 @@
 </head>
 <body>
     <div class = "post_container">
+        <h1>Search For Friends</h1>
+        <form method="GET" action="/users/search_profile/">
+            {% csrf_token %}
+            <input type="text" name="username">
+            <button>Submit</button>
+        </form>
+        <a href = "/users/edit_profile">Edit Profile</a>
         <h1>New Post</h1>
         <form action="/posts/receive_post" method="POST" enctype="multipart/form-data">
             {% csrf_token %}

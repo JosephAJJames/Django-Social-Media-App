@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="921335b0-69f6-4fc5-bbef-caca70ea0e21" name="Changes" comment="Made custom filter for getting post id">
+    <list default="true" id="921335b0-69f6-4fc5-bbef-caca70ea0e21" name="Changes" comment="commenting now works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smapp/comments/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/comments/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smapp/mainpage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/mainpage/views.py" afterDir="false" />
@@ -214,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725403380584</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="commenting now works">
+      <option name="closed" value="true" />
+      <created>1725467769070</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1725467769070</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -245,6 +253,7 @@
     <MESSAGE value="Updated the post list template so that postid field is already filled." />
     <MESSAGE value="updated the render statment in the post list view to reflect changes to the template" />
     <MESSAGE value="Made custom filter for getting post id" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made custom filter for getting post id" />
+    <MESSAGE value="commenting now works" />
+    <option name="LAST_COMMIT_MESSAGE" value="commenting now works" />
   </component>
 </project>

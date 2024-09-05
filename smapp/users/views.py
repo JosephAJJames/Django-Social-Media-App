@@ -5,6 +5,7 @@ from django.contrib.auth import login
 from .forms import UserForm
 from profilepics.models import ProfilePic
 from .helpers import detect_difference, apply_changes
+from .models import Followers, User
 
 # Create your views here.
 
@@ -54,3 +55,14 @@ def edit_profile(req):
         apply_changes(differences, req.user)
 
         return redirect("users:edit_profile")
+
+def search_profile(req):
+    username = req.GET.get("username")
+    query_set = User.objects.filter(username=username)
+
+    return render(req,"users/search_profile.html", context={
+        "query_set": query_set
+    })
+
+def add_follower(req):
+    print("bussy")

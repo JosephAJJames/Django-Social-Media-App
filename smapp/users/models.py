@@ -7,6 +7,10 @@ from profilepics.models import ProfilePic
 class User(AbstractUser):
     profilepic = ForeignKey(ProfilePic, on_delete=models.SET_NULL, related_name="pfp", null=True)
 
+
 class Followers(models.Model):
     follower = ForeignKey(User, blank=False, null=False, on_delete=CASCADE, related_name="following")
     followed = ForeignKey(User, blank=False, null=False, on_delete=CASCADE, related_name="followers")
+
+    def get_followers(self, User: User):
+        return Followers.objects.filter(follower=User.id)
