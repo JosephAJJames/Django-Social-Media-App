@@ -65,4 +65,4 @@ def search_profile(req):
     })
 
 def add_follower(req):
-    print("bussy")
+    return HttpResponse("follower added")

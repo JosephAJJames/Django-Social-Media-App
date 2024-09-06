@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="921335b0-69f6-4fc5-bbef-caca70ea0e21" name="Changes" comment="commenting now works">
+    <list default="true" id="921335b0-69f6-4fc5-bbef-caca70ea0e21" name="Changes" comment="Can now search for profiles">
+      <change afterPath="$PROJECT_DIR$/smapp/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smapp/comments/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/comments/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smapp/mainpage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/mainpage/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smapp/templates/mainpage/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/templates/mainpage/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smapp/smapp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/smapp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smapp/templates/users/login_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/templates/users/login_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smapp/templates/users/sign_up.html" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/templates/users/sign_up.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smapp/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -53,6 +55,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.forms.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/joe/Documents/projects/SocialMediaApp&quot;
@@ -73,7 +76,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-ce3d9afa04ac-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.20224.347" />
+        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
       </set>
     </attachedChunks>
   </component>
@@ -222,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725467769070</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Can now search for profiles">
+      <option name="closed" value="true" />
+      <created>1725572456951</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1725572456951</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -254,6 +265,7 @@
     <MESSAGE value="updated the render statment in the post list view to reflect changes to the template" />
     <MESSAGE value="Made custom filter for getting post id" />
     <MESSAGE value="commenting now works" />
-    <option name="LAST_COMMIT_MESSAGE" value="commenting now works" />
+    <MESSAGE value="Can now search for profiles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Can now search for profiles" />
   </component>
 </project>
