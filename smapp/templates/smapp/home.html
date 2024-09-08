@@ -1,12 +1,17 @@
 <!DOCTYPE html>
+{% extends "base.html" %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-    <h1>Post Images</h1>
-    <h1>Talk To Friends</h1>
-    <a href="users/login">Login</a>
+    {% block content %}
+        <h1>Not A Twitter Clone </h1>
+        <h1>Post Images</h1>
+        <h1>Talk To Friends</h1>
+        <a href="users/login">Login</a>
+        <a href="users/signup">Sign Up</a>
+    {% endblock %}
 </body>
 </html>
