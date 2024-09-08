@@ -1,0 +1,10 @@
+.my-container {
+    max-width: 50%;
+    margin: auto;
+}
+
+.michroma-regular {
+  font-family: "Michroma", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}

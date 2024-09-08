@@ -3,23 +3,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    {% load static %}
     <title>Title</title>
 </head>
 <body>
+    {% load filters %}
     {% block content %}
-    <h2>Sign Up</h2>
-    <form method="POST">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/signup.css' %}">
+    <form method="POST" class="container-fluid my-container">
+        <h2 class="text-primary michroma-regular">Sign Up</h2>
         {% csrf_token %}
-        {{ signup_form.email.label }}
-        {{ signup_form.email }}
-        {{ signup_form.username.label }}
-        {{ signup_form.username }}
-        {{ signup_form.password1.label }}
-        {{ signup_form.password1 }}
-        {{ signup_form.password2.label }}
-        {{ signup_form.password2 }}
-        <button>Submit</button>
+        <div class="form-group michroma-regular">
+            {{ signup_form.email.label|add_class:"michroma-regular" }}
+            {{ signup_form.email|add_class:"form-control" }}
+        </div>
+        <div class="form-group michroma-regular">
+            {{ signup_form.username.label|add_class:"michroma-regular" }}
+            {{ signup_form.username|add_class:"form-control" }}
+        </div>
+        <div class="form-group michroma-regular">
+            {{ signup_form.password1.label|add_class:"michroma-regular" }}
+            {{ signup_form.password1|add_class:"form-control" }}
+        </div>
+        <div class="form-group michroma-regular">
+            {{ signup_form.password2.label|add_class:"michroma-regular" }}
+            {{ signup_form.password2|add_class:"form-control" }}
+        </div>
+        <button class="btn btn-primary michroma-regular">Submit</button>
     </form>
     {% endblock %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
 </body>
 </html>
