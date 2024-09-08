@@ -9,13 +9,22 @@
 <body>
     {% load filters %}
     {% block content %}
-    <h1>Login</h1>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/login.css' %}">
     <form method="POST" class="container-fluid my-container">
         {% csrf_token %}
+        <h1>Login</h1>
         <div class="form-group">
-            {{ login_form }}
+            {{ login_form.username.label }}
+            {{ login_form.username }}
         </div>
-        <button class="btn btn-primary">Submit</button>
+        <div class="form-group">
+            {{ login_form.password.label }}
+            {{ login_form.password }}
+        </div>
+        <div class="btn-container">
+            <button class="btn btn-primary">Submit</button>
+            <a class="btn btn-primary">Forgot Password</a>
+        </div>
     </form>
     {% endblock %}
 </body>
