@@ -1,16 +1,22 @@
 <!DOCTYPE html>
+{% extends "base.html" %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    {% load static %}
     <title>Title</title>
 </head>
 <body>
+    {% load filters %}
+    {% block content %}
     <h1>Login</h1>
-    <form method="POST">
+    <form method="POST" class="container-fluid my-container">
         {% csrf_token %}
-        {{ login_form }}
-        <button>Submit</button>
-        <a href="/users/signup">Sign Up</a>
+        <div class="form-group">
+            {{ login_form }}
+        </div>
+        <button class="btn btn-primary">Submit</button>
     </form>
+    {% endblock %}
 </body>
 </html>

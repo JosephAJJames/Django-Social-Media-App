@@ -6,12 +6,18 @@
     <title>Title</title>
 </head>
 <body>
+    {% load static %}
     {% block content %}
-        <h1>Not A Twitter Clone </h1>
-        <h1>Post Images</h1>
-        <h1>Talk To Friends</h1>
-        <a href="users/login">Login</a>
-        <a href="users/signup">Sign Up</a>
+        <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
+        <div class="container-fluid my-container">
+            <h1>Not A Twitter Clone </h1>
+            <h2>Post Images</h2>
+            <h2>Talk To Friends</h2>
+            <div>
+                <a href="users/login" class="btn btn-primary">Login</a>
+                <a href="users/signup" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
     {% endblock %}
 </body>
 </html>

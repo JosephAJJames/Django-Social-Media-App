@@ -1,0 +1,9 @@
+.my-container {
+    max-width: 70%;
+    margin: auto;
+}
+
+div > * {
+    text-align: center;
+    margin: 1rem;
+}

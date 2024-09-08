@@ -11,7 +11,7 @@
     {% block content %}
     <link rel="stylesheet" type="text/css" href="{% static '/css/signup.css' %}">
     <form method="POST" class="container-fluid my-container">
-        <h2 class="text-primary michroma-regular">Sign Up</h2>
+        <h1 class="michroma-regular">Sign Up</h1>
         {% csrf_token %}
         <div class="form-group michroma-regular">
             {{ signup_form.email.label|add_class:"Michroma"}}
