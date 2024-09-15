@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    {% load static %}
 </head>
 <body>
+    {% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/main_page.css' %}">
     <div class = "post_container">
         <h1>Search For Friends</h1>
         <form method="GET" action="/users/search_profile/">
@@ -49,5 +52,6 @@
             {% endfor %}
         </li>
     </div>
+    {% endblock %}
 </body>
 </html>

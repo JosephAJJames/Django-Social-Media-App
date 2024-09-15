@@ -9,7 +9,6 @@ def new_post(req):
         if form.is_valid():
             post = form.save(commit=False)
             post.author = req.user
-            print("saved")
             form.save()
             return redirect("mainpage:post_list")
         else:
