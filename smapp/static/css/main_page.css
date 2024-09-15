@@ -1,0 +1,11 @@
+.search_profiles > h1 {
+    margin: 0.5rem;
+}
+
+a {
+    display: block;
+}
+
+.search_profiles{
+    text-align: center;
+}
