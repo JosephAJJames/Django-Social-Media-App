@@ -2,10 +2,84 @@
     margin: 0.5rem;
 }
 
-a {
+.edit_profile {
     display: block;
 }
 
 .search_profiles{
     text-align: center;
+}
+
+li {
+    width: 50%;
+    margin: auto;
+}
+
+.Post {
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.Post-list-container {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.Post-header {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.Post-header p {
+    margin-top: 0.7rem;
+}
+
+#pfp {
+    width: 3.0rem;
+    height: 3.0rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.Post-image {
+    margin: 0.8rem 0;
+}
+
+.Post-image img {
+    width: 100%;
+    max-height: 400px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.Post-comments {
+    width: 65%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Comment-div {
+    display: flex;
+    gap: 1rem;
+}
+
+.Comment-form textarea {
+    max-height: 5rem;
+    max-width: 20rem;
+}
+
+.Comment-div {
+    display: flex;
+}
+
+.Comment-div img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
 }

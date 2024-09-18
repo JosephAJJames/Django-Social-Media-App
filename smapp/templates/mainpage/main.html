@@ -14,46 +14,61 @@
         <form method="GET" action="/users/search_profile/">
             {% csrf_token %}
             <input class="form-group" type="text" name="username">
-            <button class="btn btn-primary">Submit</button>
-            <a class="form-group" href = "/users/edit_profile">Edit Profile</a>
+            <button class="btn btn-primary">Search</button>
+            <a class="form-group edit_profile" href = "/users/edit_profile">Edit Profile</a>
         </form>
     </div>
-    <div class = "post_container">
-        <h1>New Post</h1>
-        <form action="/posts/receive_post" method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{new_post}}
-            <button>Submit</button>
-        </form>
-        <h1>Post List</h1>
-        <li class = "post_list">
+    <h1>New Post</h1>
+    <form action="/posts/receive_post" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{new_post}}
+        <button>Post</button>
+    </form>
+
+    <div class="Post-list-container">
+        <h1>Posts</h1>
             {% load filters %}
             {% for post, form in posts_and_comment_form %}
-                <div class="post">
-                    <img src="{{ post.image.url }}">
-                    <img id="pfp" src= "{{post.author.profilepic.image.url}}">
-                    <p>{{ post.text }}</p>
-                    <p>{{ post.author }}</p>
-                    <p>{{ post.created_at }}</p>
-                    {% with comments=comment_dict|get_value:post.id %}
-                        {% if comments %}
-                            {% for comment in comments %}
-                                <p>{{ comment }}</p>
-                            {% endfor %}
-                        {% else %}
-                            <p>No comments for this post</p>
-                        {% endif %}
-                    {% endwith %}
-                    <form action="/comments/new_comment" method="POST">
-                        {% csrf_token %}
-                        {{ form }}
-                        <button>Submit</button>
-                    </form>
+                <div class="Post">
+                    <div class="Post-header">
+                        <img id="pfp" src="{{post.author.profilepic.image.url}}">
+                        <p class="author-name">{{ post.author }}</p>
+                        <p>{{ post.created_at }}</p>
+                    </div>
+                    <div class="Post-image">
+                        <img src="{{ post.image.url }}">
+                    </div>
+                    <div class="Post-content">
+                        <p>{{ post.text }}</p>
+                    </div>
+                    <div class="Post-comments">
+                        <div class="comments">
+                            {% with comments=comment_dict|get_value:post.id %}
+                                {% if comments %}
+                                    {% for comment in comments %}
+                                        <div class="Comment-div">
+                                            <img if="Commenter-pfp" src="{{comment.author.profilepic.image.url}}">
+                                            <p>{{ comment.author.username }}:</p>
+                                            <p>{{ comment.text }}</p>
+                                        </div>
+                                    {% endfor %}
+                                {% else %}
+                                    <p>No comments for this post</p>
+                                {% endif %}
+                            {% endwith %}
+                        </div>
+                        <div class="Comment-form">
+                            <form action="/comments/new_comment" method="POST">
+                                {% csrf_token %}
+                                {{ form }}
+                                <button>Comment</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             {% empty %}
-            <p>No Posts</p>
+                <p>No Posts</p>
             {% endfor %}
-        </li>
     </div>
     {% endblock %}
 </body>

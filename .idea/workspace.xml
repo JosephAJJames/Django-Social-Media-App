@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="921335b0-69f6-4fc5-bbef-caca70ea0e21" name="Changes" comment="Styling post list">
+    <list default="true" id="921335b0-69f6-4fc5-bbef-caca70ea0e21" name="Changes" comment="Styled the search profile section">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smapp/static/css/main_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/static/css/main_page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smapp/templates/mainpage/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/templates/mainpage/main.html" afterDir="false" />
@@ -279,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726406628580</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Styled the search profile section">
+      <option name="closed" value="true" />
+      <created>1726408112835</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1726408112835</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -294,7 +302,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial Set Up" />
     <MESSAGE value="Implamented login, changed login view function name to login_user" />
     <MESSAGE value="Dont need custom user form anymore, using django built in" />
     <MESSAGE value="Added re-direct to post list after successfull login" />
@@ -319,6 +326,7 @@
     <MESSAGE value="styled signup and home" />
     <MESSAGE value="Styled login" />
     <MESSAGE value="Styling post list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Styling post list" />
+    <MESSAGE value="Styled the search profile section" />
+    <option name="LAST_COMMIT_MESSAGE" value="Styled the search profile section" />
   </component>
 </project>
