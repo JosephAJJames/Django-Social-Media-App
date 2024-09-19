@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="921335b0-69f6-4fc5-bbef-caca70ea0e21" name="Changes" comment="Styled the search profile section">
+    <list default="true" id="921335b0-69f6-4fc5-bbef-caca70ea0e21" name="Changes" comment="added js event listener to new post button">
+      <change afterPath="$PROJECT_DIR$/smapp/static/css/editprofile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smapp/static/js/set_pfp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smapp/static/css/main_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/static/css/main_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smapp/static/css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/static/css/signup.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smapp/templates/mainpage/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/templates/mainpage/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smapp/templates/users/edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/smapp/templates/users/edit_profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,7 +290,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726408112835</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Basic styling and structre added to main.hmtl, changed the comment dict to pass objects rather than just the text">
+      <option name="closed" value="true" />
+      <created>1726672222996</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1726672222996</updated>
+    </task>
+    <task id="LOCAL-00027" summary="added js event listener to new post button">
+      <option name="closed" value="true" />
+      <created>1726742707093</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1726742707093</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -302,8 +321,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implamented login, changed login view function name to login_user" />
-    <MESSAGE value="Dont need custom user form anymore, using django built in" />
     <MESSAGE value="Added re-direct to post list after successfull login" />
     <MESSAGE value="Added signup button on login_page.html and created the page with the form" />
     <MESSAGE value="Added post list to main template" />
@@ -327,6 +344,8 @@
     <MESSAGE value="Styled login" />
     <MESSAGE value="Styling post list" />
     <MESSAGE value="Styled the search profile section" />
-    <option name="LAST_COMMIT_MESSAGE" value="Styled the search profile section" />
+    <MESSAGE value="Basic styling and structre added to main.hmtl, changed the comment dict to pass objects rather than just the text" />
+    <MESSAGE value="added js event listener to new post button" />
+    <option name="LAST_COMMIT_MESSAGE" value="added js event listener to new post button" />
   </component>
 </project>

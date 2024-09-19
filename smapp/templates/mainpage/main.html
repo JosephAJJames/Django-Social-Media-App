@@ -9,6 +9,7 @@
 <body>
     {% block content %}
     <link rel="stylesheet" type="text/css" href="{% static '/css/main_page.css' %}">
+    <script src="{% static 'js/new_post.js' %}" defer></script>
     <div class="search_profiles">
         <h1>Search Profiles</h1>
         <form method="GET" action="/users/search_profile/">
@@ -18,16 +19,20 @@
             <a class="form-group edit_profile" href = "/users/edit_profile">Edit Profile</a>
         </form>
     </div>
-    <h1>New Post</h1>
-    <form action="/posts/receive_post" method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{new_post}}
-        <button>Post</button>
-    </form>
+
 
     <div class="Post-list-container">
         <h1>Posts</h1>
+        <button id="New-post">New Post</button>
             {% load filters %}
+            <div id="New-post-div" class="New-post-div-hidden">
+                <h1>New Post</h1>
+                <form action="/posts/receive_post" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{new_post}}
+                    <button>Post</button>
+                </form>
+            </div>
             {% for post, form in posts_and_comment_form %}
                 <div class="Post">
                     <div class="Post-header">

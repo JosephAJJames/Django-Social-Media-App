@@ -1,0 +1,14 @@
+.container {
+    text-align: center;
+}
+
+#pfp {
+    height: 5rem;
+    width: 5rem;
+    object-cover: cover;
+    border-radius: 50%;
+}
+
+#pfp:hover {
+    cursor: pointer;
+}
