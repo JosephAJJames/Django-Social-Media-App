@@ -83,3 +83,17 @@ li {
     border-radius: 50%;
     object-fit: cover;
 }
+
+#New-post {
+    border-radius: 0.5rem;
+}
+
+.New-post-div-hidden {
+    display: none;
+}
+
+.New-post-div-shown {
+    display: block;
+    border: 1px black solid;
+    border-radius: 0.5rem;
+}
